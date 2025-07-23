@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: #00ff00;
+  font-family: "Courier New", monospace;
+  overflow: hidden;
+  font-size: 16px;
+  padding: 20px;
+}
+
+#terminal {
+  white-space: pre-wrap;
+}
+
+.flash-red {
+  animation: flash 0.2s infinite;
+}
+
+@keyframes flash {
+  0% { background-color: black; }
+  50% { background-color: darkred; }
+  100% { background-color: black; }
+}
