@@ -1,23 +1,30 @@
 body {
   margin: 0;
   background-color: black;
+  font-family: monospace;
   color: #00ff00;
-  font-family: "Courier New", monospace;
+  font-size: 13px;
   overflow: hidden;
-  font-size: 16px;
+  cursor: none;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
   padding: 20px;
+  animation: flicker 0.05s infinite;
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 #terminal {
   white-space: pre-wrap;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 20px;
+  text-shadow: 0 0 4px #00ff00;
 }
 
-.flash-red {
-  animation: flash 0.2s infinite;
-}
-
-@keyframes flash {
-  0% { background-color: black; }
-  50% { background-color: darkred; }
-  100% { background-color: black; }
+@keyframes flicker {
+  0%, 100% { background-color: black; }
+  50% { background-color: #0a0a0a; }
 }
